@@ -80,12 +80,14 @@ grapesjs.plugins.add(PLUGIN_NAME, (editor, opts = {}) => {
   }
 
   // Add edit command
+  const imgEl = document.createElement('img');
   cmdm.add('image-editor', {
       run(ed, sender, opts) {
         let opt = opts || {};
         let sel = opt.model || ed.getSelected();
         editorImage = sel;
-        imageEditor.launch({image: sel.view.el});
+        imgEl.src = sel.get('src');
+        imageEditor.launch({image: imgEl});
         em.trigger(`${PLUGIN_NAME}:launch`, sel, imageEditor);
       },
   });
