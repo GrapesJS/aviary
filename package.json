@@ -1,6 +1,6 @@
 {
   "name": "grapesjs-aviary",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Add Aviary Image Editor",
   "main": "dist/grapesjs-aviary.min.js",
   "scripts": {
