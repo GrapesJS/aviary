@@ -1,6 +1,8 @@
+import grapesjs from 'grapesjs';
+
 const PLUGIN_NAME = 'gjs-aviary';
 
-grapesjs.plugins.add(PLUGIN_NAME, (editor, opts = {}) => {
+export default grapesjs.plugins.add(PLUGIN_NAME, (editor, opts = {}) => {
   let c = opts;
   let em = editor.getModel();
   let editorImage;
